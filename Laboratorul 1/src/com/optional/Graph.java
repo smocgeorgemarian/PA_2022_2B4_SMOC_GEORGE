@@ -3,8 +3,6 @@ package com.optional;
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
 public class Graph {
     boolean[] uz; // uz[node] = true iff node has been visited via dfs
     boolean[][] g; // g[node_1][node_2] = g[node_2][node_1] = true iff node_1 and node_2 are connected in graph G

@@ -1,0 +1,5 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(äõÒıÿÿÿÿ
+
+java:S1319"iThe type of "arrayList" should be an interface such as "List" rather than the implementation "ArrayList".(Ğ‘Ëº
+k	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ÿ¿¤úÿÿÿÿ
