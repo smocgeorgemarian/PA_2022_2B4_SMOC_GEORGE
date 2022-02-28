@@ -83,11 +83,6 @@ public class Graph {
     public static int validateInteger(String[] args)
     {
         // start validation
-        if (args.length > 2)
-        {
-            System.err.println("Too many arguments");
-            System.exit(1);
-        }
         int argument = -1;
         try
         {
@@ -96,12 +91,12 @@ public class Graph {
         catch (Exception e)
         {
             System.err.println(e.getMessage());
-            System.exit(2);
+            System.exit(1);
         }
         if (argument <= 0)
         {
             System.err.println("Matrix cannot have size <= 0");
-            System.exit(3);
+            System.exit(2);
         }
         return argument;
     }
