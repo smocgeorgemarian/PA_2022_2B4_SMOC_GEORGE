@@ -21,3 +21,13 @@ U
 %src/com/company/homework/Problem.java,5\a\5a750752548e1c672fcbc3cf39acc48654175254
 V
 &src/com/company/homework/Solution.java,8\c\8c6def2a3f7529bd44b7554c0ec6bf46c196dcb6
+W
+'src/com/company/compulsory/Problem.java,6\8\68830f756ac2ac4446077d0d572d34425c1610b9
+Y
+)src/com/company/compulsory/Eveniment.java,c\8\c8593429f586c7086c5a76b7d903510720077356
+T
+$src/com/company/compulsory/Room.java,7\8\789dad9e92f42900dc5dd50eedf2ce0810af7762
+X
+(src/com/company/compulsory/RoomType.java,a\0\a04de0f3201792454d672078601c03958654fdb0
+I
+src/com/company/Main.java,4\a\4a831b10439099d44774d0ccc387e808deffaeab
