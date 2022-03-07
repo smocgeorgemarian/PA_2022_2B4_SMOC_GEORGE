@@ -1,5 +1,7 @@
 package lab.solver;
 
+import lab.comparator.EventsComparator;
+import lab.comparator.RoomsComparator;
 import lab.model.ComputerLab;
 import lab.model.Eveniment;
 import lab.model.LectureHall;
@@ -77,11 +79,11 @@ public class GreedyAlgorithm implements Algorithm {
      * @return <code>Solution</code> object representing the assignment of each event to a specific room (if possible)
      */
     public Solution solve() {
-        pb.sortEventsByEndTime();
-        pb.sortRoomsByCapacity();
-
         List<Room> rooms = pb.getRooms();
         List<Eveniment> events = pb.getEvents();
+        rooms.sort(new RoomsComparator());
+        events.sort(new EventsComparator());
+
         List<List<TimeInterval>> timeIntervals = getInitialTimeIntervals(rooms.size());
         Room[] assignment = new Room[events.size()];
         Solution solution = new Solution(assignment);

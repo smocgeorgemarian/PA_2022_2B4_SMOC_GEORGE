@@ -3,6 +3,9 @@ package lab.solver;
 import lab.model.Room;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Class containting the representation of an event, encapsulating state information needed
  * for operations done in choosing the best <code>Eventiment</code> for the best <code>Room</code>.
@@ -17,6 +20,7 @@ import java.util.Arrays;
  */
 public class Solution {
     private Room[] assignment;
+    private final Map<Room, Boolean> usedRooms = new HashMap<>();
     /**
      * Constructor that sets up only size of the assignment.
      * @param size The size to be set.
@@ -35,21 +39,25 @@ public class Solution {
         this.assignment = assignment;
     }
     /**
-     * Sets this assignment to assignment value
+     * Sets this assignment to assignment value and adds rooms from assignment in usedRooms
      * @param assignment The value to be set
      * @see Room
      */
     public void setAssignment(Room[] assignment) {
         this.assignment = assignment;
+        for (Room room : assignment) {
+            usedRooms.put(room, true);
+        }
     }
     /**
-     * Sets <code>assignment[index]</code> to room.
+     * Sets <code>assignment[index]</code> to room and adds room in usedRooms
      * @param index The position in the <code>array</code>.
      * @param room The room to be set on the position index.
      * @see Room
      */
     public void setAssignmentWithIndex(int index, Room room) {
         assignment[index] = room;
+        usedRooms.put(room, true);
     }
     /**
      * Returns this assignment representing the configuration in the actual moment for the solution.
@@ -58,6 +66,24 @@ public class Solution {
      */
     public Room[] getAssignment() {
         return assignment;
+    }
+    /**
+     * Returns the number of <code>Eveniment</code> object that were matched with a <code</code> Room object.
+     * @return the number of events that were matched with a room
+     */
+    public int getNumberOfMatches() {
+        int numberOfMatches = 0;
+        for (Room room : assignment)
+            if (room != null)
+                numberOfMatches++;
+        return numberOfMatches;
+    }
+    /**
+     *  Returns number of distinct <code>Room</code> objects used by algoritm for which this is folution.
+     * @return size of map usedRooms
+     */
+    public int getNumberOfUsedRooms() {
+        return usedRooms.size();
     }
     /**
      * Returns the JSON representation of this <code>Solution</code> object.

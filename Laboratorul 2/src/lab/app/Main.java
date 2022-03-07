@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Class used to show the example presented at the 2nd Laboratory and the random tests for Bonus part(to be implemented).
  * @author George Smoc
@@ -84,10 +85,46 @@ public class Main {
         System.out.println("Solution found by DSatur:\n" + sol);
     }
     /**
+     * Tests the application on random examples generated via <code>RandomTestsGenerator</code>.
+     * @see RandomTestsGenerator
+     */
+    private static void bonus() {
+        RandomTestsGenerator randomTestsGenerator = new RandomTestsGenerator();
+        int numberOfTests = randomTestsGenerator.generateNumberOfTests();
+        for (int i = 0; i < numberOfTests; i++) {
+            Problem pb = new Problem();
+
+            int numberOfEvents = randomTestsGenerator.generateNumberOfEvents();
+            randomTestsGenerator.setEvents(pb, numberOfEvents);
+            int numberOfRooms = randomTestsGenerator.generateNumberOfRooms();
+            randomTestsGenerator.setRooms(pb, numberOfRooms);
+
+            long greedyStartTime = System.currentTimeMillis();
+            Algorithm greedy = new GreedyAlgorithm(pb);
+            Solution sol1 = greedy.solve();
+            long greedyEndTime = System.currentTimeMillis();
+            System.out.println("End of Greedy");
+
+            long dSaturStartTime = System.currentTimeMillis();
+            Algorithm dSatur = new DSaturAlgorithm(pb);
+            Solution sol2 = dSatur.solve();
+            long dSaturEndTime = System.currentTimeMillis();
+            System.out.println("End of DSatur");
+
+            System.out.println("Greedy Time: " + (greedyEndTime - greedyStartTime));
+            System.out.println("DSatur Time: " + (dSaturEndTime - dSaturStartTime));
+            System.out.println("Greedy number of matches: " + sol1.getNumberOfMatches() + " using " +
+                    sol1.getNumberOfUsedRooms() + " rooms");
+            System.out.println("DSatur number of matches: " + sol2.getNumberOfMatches() + " using " +
+                    sol2.getNumberOfUsedRooms() + " rooms");
+        }
+    }
+    /**
      * Tests the application for homework and bonus(to be implemented) parts.
      * @param args arguments of the program - to be ignored
      */
     public static void main(String[] args) {
         homework();
+        bonus();
     }
 }
