@@ -68,7 +68,7 @@ public class Solution {
         return assignment;
     }
     /**
-     * Returns the number of <code>Eveniment</code> object that were matched with a <code</code> Room object.
+     * Returns the number of <code>Eveniment</code> object that were matched with a <code>Room</code> object.
      * @return the number of events that were matched with a room
      */
     public int getNumberOfMatches() {
