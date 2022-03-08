@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Network {
-    List<Node> nodes = new ArrayList<>();
+    private List<Node> nodes = new ArrayList<>();
 
     public Network() {}
 
