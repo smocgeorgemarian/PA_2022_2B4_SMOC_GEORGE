@@ -70,20 +70,25 @@ public class DijkstraAlgorithm implements Algorithm{
         Map<Node, Integer> normalisation = getNormalisation();
         List<List<NodeInfo>> adjacencyList = getAdjacencyList(normalisation);
         PriorityQueue<NodeInfo> priorityQueue = new PriorityQueue<>(this.sizeNodeList, new NodeInfoComparator());
-
-        float[] costArray = new float[this.nodeList.size()];
-        Arrays.fill(costArray, INF_VALUE);
-
         int startIndex = normalisation.get(this.startNode);
+
+        float[] costArray = new float[this.sizeNodeList];
+        Arrays.fill(costArray, INF_VALUE);
         costArray[startIndex] = 0;
+
+        boolean[] used = new boolean[this.sizeNodeList];
+        used[startIndex] = true;
+
         NodeInfo nodeInfo = new NodeInfo(startIndex, 0);
         priorityQueue.add(nodeInfo);
 
-        int[] before = new int[this.nodeList.size()];
+        int[] before = new int[this.sizeNodeList];
         Arrays.fill(before, NO_BEFORE);
         while (!priorityQueue.isEmpty()) {
             NodeInfo actualNode = priorityQueue.poll();
+
             int nodeIndex = actualNode.getNodeIndex();
+            used[nodeIndex] = false;
             float cost = actualNode.getCost();
             // Visit all neighbours and update cost where necessary
             for (int i = 0; i < adjacencyList.get(nodeIndex).size(); i++) {
@@ -92,9 +97,13 @@ public class DijkstraAlgorithm implements Algorithm{
                 float costNeighbour = toNeighbour.getCost();
                 if (cost + Math.log(costNeighbour) < costArray[nodeIndexNeighbour]) {
                     costArray[nodeIndexNeighbour] = cost + (float) Math.log(costNeighbour);
-                    NodeInfo nodeInfo1 = new NodeInfo(nodeIndexNeighbour, costArray[nodeIndexNeighbour]);
-                    priorityQueue.add(nodeInfo1);
                     before[nodeIndexNeighbour] = nodeIndex;
+
+                    if (!used[nodeIndexNeighbour]) {
+                        used[nodeIndexNeighbour] = true;
+                        NodeInfo nodeInfo1 = new NodeInfo(nodeIndexNeighbour, costArray[nodeIndexNeighbour]);
+                        priorityQueue.add(nodeInfo1);
+                    }
                 }
             }
         }
