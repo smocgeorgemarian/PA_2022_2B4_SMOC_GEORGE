@@ -50,7 +50,7 @@ public abstract class Node implements Comparable<Node>{
             Edge edge = costEntry.getValue();
             if (numberOfEntries > 0)
                 sb.append(", ");
-            sb.append('\'' + key + "\': " + edge);
+            sb.append('\'').append(key).append("': ").append(edge);
             numberOfEntries++;
         }
         sb.append('}');
@@ -73,7 +73,7 @@ public abstract class Node implements Comparable<Node>{
     public int compareTo(Node other) {
         if (this == other) return 0;
         if (other == null ) throw new NullPointerException();
-        return this.name.compareTo(((Node)other).name);
+        return this.name.compareTo((other).name);
     }
 
     @Override

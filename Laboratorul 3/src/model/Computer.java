@@ -1,6 +1,5 @@
 package model;
 
-import java.security.InvalidParameterException;
 import java.util.Objects;
 
 public class Computer extends Node implements Identifiable, Storage {

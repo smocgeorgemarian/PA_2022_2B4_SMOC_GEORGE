@@ -22,7 +22,7 @@ public class Main {
                 "2a02:2f0e:6009:9f00:ccb2:9d92:ae9b:e26e");
         Node node5 = new Computer("Computer B", "00:FF:FF:AB:BB:AF" ,
                 "2a02:2f0e:6009:9f00:ccb2:9d92:ae9b:e26f", 512);
-        Edge edge = new Edge(10,  (float)0.3);
+        Edge edge = new Edge(10, (float)0.3);
         node.setCost(node1, edge);
         edge = new Edge(50, (float)0.4);
         node.setCost(node2, edge);
@@ -63,13 +63,12 @@ public class Main {
         System.out.println("Network where paths > 2 are edges and is made of paths with start node and end node" +
                 " identifiable:\n" + contractedNetwork);
 
-
         List<Node> nodes = network.getNodes();
         Node startNode = nodes.get(0);
         Node endNode = nodes.get(nodes.size() - 1);
         // Apply Dijkstra's algorithm on start node to get the cost to get to end node
-        Algorithm dijstraAlgorithm = new DijkstraAlgorithm(network, startNode, endNode);
-        contractedNetwork = dijstraAlgorithm.solve();
+        Algorithm dijkstraAlgorithm = new DijkstraAlgorithm(network, startNode, endNode);
+        contractedNetwork = dijkstraAlgorithm.solve();
         System.out.println("Network considering only the best path from start node to end node:\n" + contractedNetwork);
     }
 }

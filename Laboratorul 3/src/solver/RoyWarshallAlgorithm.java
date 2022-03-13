@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class RoyWarshallAlgorithm implements Algorithm {
     private final List<Node> nodeList;
-    int sizeNodeList;
+    private final int sizeNodeList;
 
     public RoyWarshallAlgorithm(Network network) {
         this.nodeList = network.getNodes();

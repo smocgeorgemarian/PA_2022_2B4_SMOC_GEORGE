@@ -8,9 +8,9 @@ public class DijkstraAlgorithm implements Algorithm{
     private final List<Node> nodeList;
     private final Node startNode;
     private final Node endNode;
-    static final float INF_VALUE = 9999999;
-    static final int NO_BEFORE = -1;
-    int sizeNodeList;
+    private static final float INF_VALUE = 9999999;
+    private static final int NO_BEFORE = -1;
+    private final int sizeNodeList;
 
     public DijkstraAlgorithm(Network network, Node startNode, Node endNode) {
         this.nodeList = network.getNodes();
