@@ -24,6 +24,22 @@ public class Network {
         nodes.add(node);
     }
 
+    public void setIdentifiablesToPrintable() {
+        List<Node> copyNodes = new ArrayList<>();
+        for (Node node: nodes)
+            if (node instanceof Identifiable)
+                copyNodes.add(node);
+        System.out.println("identifiables=" + copyNodes);
+    }
+
+    private List<Node> getIdentifiables() {
+        List<Node> copyNodes = new ArrayList<>();
+        for (Node node: nodes)
+            if (node instanceof Identifiable)
+                copyNodes.add(node);
+        return copyNodes;
+    }
+
     @Override
     public String toString() {
         return "Network{" +

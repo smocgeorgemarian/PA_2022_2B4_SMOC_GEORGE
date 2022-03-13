@@ -22,7 +22,8 @@ public class Router extends Node implements Identifiable{
     public String toString() {
         return "Router{" +
                 "name='" + name + '\'' +
-                ", macAddress='" + macAdress + '\'' +
+                ", cost=" + getCostAdjacencyList() +
+                ", macAdress='" + macAdress + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }

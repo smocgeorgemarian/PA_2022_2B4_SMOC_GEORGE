@@ -1,0 +1,1 @@
+Compulsory, Homework, Bonus primele 2 subpuncte

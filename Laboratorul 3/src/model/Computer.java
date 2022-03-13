@@ -1,5 +1,6 @@
 package model;
 
+import java.security.InvalidParameterException;
 import java.util.Objects;
 
 public class Computer extends Node implements Identifiable, Storage {
@@ -34,10 +35,11 @@ public class Computer extends Node implements Identifiable, Storage {
     @Override
     public String toString() {
         return "Computer{" +
-                "name='" + name + '\'' +
-                ", macAddress='" + macAdress + '\'' +
-                ", address='" + address + '\'' +
+                "address='" + address + '\'' +
                 ", storageCapacity=" + storageCapacity +
+                ", name='" + name + '\'' +
+                ", cost=" + getCostAdjacencyList() +
+                ", macAdress='" + macAdress + '\'' +
                 '}';
     }
 
