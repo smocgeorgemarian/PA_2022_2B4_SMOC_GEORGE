@@ -29,6 +29,7 @@ public class Network {
         for (Node node: nodes)
             if (node instanceof Identifiable)
                 copyNodes.add(node);
+        copyNodes.sort(new IdentifiableComparator());
         System.out.println("identifiables=" + copyNodes);
     }
 
