@@ -6,7 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CycleSolution {
-    private List<Intersection> nodes = new ArrayList<>();
+    List<Intersection> nodes = new ArrayList<>();
+
+    public CycleSolution(List<Intersection> nodes) {
+        this.nodes = nodes;
+    }
+
+    public CycleSolution() {
+
+    }
 
     public void addNode(Intersection node) {
         nodes.add(node);

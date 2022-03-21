@@ -1,6 +1,8 @@
 package source;
 
 import com.github.javafaker.Faker;
+import generator.CycleSolution;
+import generator.Dfs;
 import generator.RandomTestsGenerator;
 import model.City;
 import model.Intersection;
@@ -64,7 +66,9 @@ public class Main {
 
             Algorithm algorithm = new PrimAlgorithm(city);
             Solution solution = algorithm.solve();
-            System.out.println("[random test " + testIndex + "] The streets chosen for APM:\n" + solution);
+            Dfs dfs = new Dfs(solution);
+            CycleSolution cycleSolution = dfs.solve();
+            System.out.println("[random test " + testIndex + "] The streets chosen for APM:\n" + cycleSolution);
         }
     }
 

@@ -67,7 +67,7 @@ public class RandomTestsGenerator {
         }
     }
 
-    public CycleSolution getCycleSolution(int citySize) {
+    public City getCity(int citySize) {
         Intersection[] nodes = getNodes(citySize);
         Street[] streets = getStreets(citySize, nodes);
 
@@ -79,7 +79,8 @@ public class RandomTestsGenerator {
             intersectionListMap.get(street.getStart()).add(street);
             intersectionListMap.get(street.getEnd()).add(street);
         }
-        City
-        return cycleSolution;
+        City city = new City();
+        city.setCityMap(intersectionListMap);
+        return city;
     }
 }

@@ -14,7 +14,7 @@ public class ReportCommand {
     public static void execute(Catalog catalog) {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_31);
         configuration.setIncompatibleImprovements(Configuration.VERSION_2_3_31);
-        configuration.setClassForTemplateLoading(ReportCommand.class, "/model/");
+        configuration.setClassForTemplateLoading(ReportCommand.class, "/");
         configuration.setDefaultEncoding("UTF-8");
         configuration.setLocale(Locale.ENGLISH);
         configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
@@ -32,6 +32,12 @@ public class ReportCommand {
 
             template.process(input, fileWriter);
             fileWriter.close();
+            fileWriter = new FileWriter(new File("output.html"));
+            try {
+                template.process(input, fileWriter);
+            } finally {
+                fileWriter.close();
+            }
         }
         catch (IOException | TemplateException e) {
             e.printStackTrace();

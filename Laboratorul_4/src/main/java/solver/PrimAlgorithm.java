@@ -66,6 +66,8 @@ public class PrimAlgorithm implements Algorithm{
 
             if (componentStart != componentEnd) {
                 union(componentStart, componentEnd, height, father);
+                solution.setNodeStreet(street.getStart(), street);
+                solution.setNodeStreet(street.getEnd(), street);
                 solution.setStreet(street);
             }
         }

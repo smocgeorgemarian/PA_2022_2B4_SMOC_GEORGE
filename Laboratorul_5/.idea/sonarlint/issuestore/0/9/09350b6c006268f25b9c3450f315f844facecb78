@@ -1,0 +1,6 @@
+
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(¨š¹¾úÿÿÿÿ8ÐÈ®éú/
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(¨š¹¾úÿÿÿÿ8ÔÈ®éú/
+]	java:S125A"<This block of commented-out lines of code should be removed.(ÞÉ÷¥ûÿÿÿÿ8¨îÇéú/
+N
+java:S1144 "1Remove this unused private "testLoadView" method.(È¡³Ö8©îÇéú/
