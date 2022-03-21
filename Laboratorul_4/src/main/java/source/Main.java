@@ -1,6 +1,7 @@
 package source;
 
 import com.github.javafaker.Faker;
+import generator.RandomTestsGenerator;
 import model.City;
 import model.Intersection;
 import model.Street;
@@ -55,6 +56,17 @@ public class Main {
         for (var intersection: intersectionSet)
             intersection.setName(faker.funnyName().name());
     }
+    public static void setRandomTestsPrintable() {
+        for (int testIndex = 0; testIndex < 10; testIndex++) {
+            RandomTestsGenerator randomTestsGenerator = new RandomTestsGenerator();
+            int cs = randomTestsGenerator.getCitySize();
+            City city = randomTestsGenerator.getCity(cs);
+
+            Algorithm algorithm = new PrimAlgorithm(city);
+            Solution solution = algorithm.solve();
+            System.out.println("[random test " + testIndex + "] The streets chosen for APM:\n" + solution);
+        }
+    }
 
     public static void main(String[] args) {
         var nodes = IntStream.range(0, 9)
@@ -84,5 +96,7 @@ public class Main {
         Algorithm algorithm = new PrimAlgorithm(city);
         Solution solution = algorithm.solve();
         System.out.println("The streets chosen for APM:\n" + solution);
+
+        setRandomTestsPrintable();
     }
 }
