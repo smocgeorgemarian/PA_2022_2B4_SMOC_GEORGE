@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
     /*
     Add nodes from the example
-     */
+    */
     private static void createNetwork(Network network) {
         Node node = new Computer("Computer A", "00:FF:FF:AB:BB:AA",
                 "2a02:2f0e:6009:9f00:ccb2:9d92:ae9b:e26a", 256);

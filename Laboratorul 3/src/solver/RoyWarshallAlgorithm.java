@@ -48,7 +48,7 @@ public class RoyWarshallAlgorithm implements Algorithm {
         return newNodes;
     }
 
-    void setCostForNodeList(List<Node> newNodes, float[][] costMatrix) {
+    private void setCostForNodeList(List<Node> newNodes, float[][] costMatrix) {
         for (int i = 0; i < this.sizeNodeList; i++) {
             Node fNode = newNodes.get(i);
             if (fNode instanceof Identifiable) {
@@ -65,7 +65,7 @@ public class RoyWarshallAlgorithm implements Algorithm {
         }
     }
 
-    List<Node> getNewNodesFiltered(List<Node> newNodes) {
+    private List<Node> getNewNodesFiltered(List<Node> newNodes) {
         List<Node> newNodesFiltered = new ArrayList<>();
         for (Node node: newNodes) {
             if (node instanceof Identifiable)
