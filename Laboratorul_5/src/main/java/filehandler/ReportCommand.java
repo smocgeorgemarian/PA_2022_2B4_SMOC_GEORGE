@@ -4,14 +4,19 @@ import freemarker.template.*;
 import model.Catalog;
 import model.Item;
 
+import java.awt.*;
 import java.io.*;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
 
+import exceptions.*;
+
 public class ReportCommand {
-    public static void execute(Catalog catalog) {
+    private static final String OUTPUT = "output.html";
+    private ReportCommand() {}
+    public static void execute(Catalog catalog) throws TemplateProcessCustomException {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_31);
         configuration.setIncompatibleImprovements(Configuration.VERSION_2_3_31);
         configuration.setClassForTemplateLoading(ReportCommand.class, "/");
@@ -28,19 +33,17 @@ public class ReportCommand {
             Template template = configuration.getTemplate("template.ftl");
             Writer consoleWriter = new OutputStreamWriter(System.out);
             template.process(input, consoleWriter);
-            Writer fileWriter = new FileWriter("output.html");
-
+            Writer fileWriter = new FileWriter(OUTPUT);
             template.process(input, fileWriter);
             fileWriter.close();
-            fileWriter = new FileWriter(new File("output.html"));
-            try {
-                template.process(input, fileWriter);
-            } finally {
-                fileWriter.close();
-            }
+            fileWriter = new FileWriter(OUTPUT);
+            template.process(input, fileWriter);
+            fileWriter.close();
+            Desktop desktop = Desktop.getDesktop();
+            desktop.open(new File(OUTPUT));
         }
         catch (IOException | TemplateException e) {
-            e.printStackTrace();
+            throw new TemplateProcessCustomException(e);
         }
     }
 }

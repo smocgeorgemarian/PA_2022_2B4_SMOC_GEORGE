@@ -6,7 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "subtype")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "subtype")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Book.class, name = "book"),
         @JsonSubTypes.Type(value = Article.class, name = "article")
@@ -17,11 +17,11 @@ public abstract class Item implements Serializable {
     protected String location;
     protected int year;
     protected String author;
-    protected Map<String, Object> tags = new HashMap<>();
+    protected Map<String, Item> tags = new HashMap<>();
 
-    public Item() {}
+    protected Item() {}
 
-    public Item(String id, String title, String location, int year, String author, Map<String, Object> tags) {
+    protected Item(String id, String title, String location, int year, String author, Map<String, Item> tags) {
         this.id = id;
         this.title = title;
         this.location = location;
@@ -30,7 +30,7 @@ public abstract class Item implements Serializable {
         this.tags = tags;
     }
 
-    public Item(String id, String title, String location, int year, String author) {
+    protected Item(String id, String title, String location, int year, String author) {
         this.id = id;
         this.title = title;
         this.location = location;
@@ -58,7 +58,7 @@ public abstract class Item implements Serializable {
         this.author = author;
     }
 
-    public void setTags(Map<String, Object> tags) {
+    public void setTags(Map<String, Item> tags) {
         this.tags = tags;
     }
 
@@ -82,7 +82,7 @@ public abstract class Item implements Serializable {
         return author;
     }
 
-    public Map<String, Object> getTags() {
+    public Map<String, Item> getTags() {
         return tags;
     }
 }

@@ -1,6 +1,7 @@
 package filehandler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import exceptions.InvalidCatalogException;
 import model.*;
 
 import java.awt.*;

@@ -9,7 +9,7 @@ public class Article extends Item{
 
     public Article() {}
 
-    public Article(String id, String title, String location, int year, String author, Map<String, Object> tags, int noDownloads) {
+    public Article(String id, String title, String location, int year, String author, Map<String, Item> tags, int noDownloads) {
         super(id, title, location, year, author, tags);
         this.noDownloads = noDownloads;
     }

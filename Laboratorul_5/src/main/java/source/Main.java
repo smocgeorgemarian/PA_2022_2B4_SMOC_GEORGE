@@ -1,5 +1,7 @@
 package source;
 
+import exceptions.InvalidCatalogException;
+import exceptions.TemplateProcessCustomException;
 import filehandler.*;
 import model.Article;
 import model.Book;
@@ -48,21 +50,19 @@ public class Main {
     }
 
     private void testReport() {
-        Catalog catalog;
         try {
-            catalog = LoadCommand.execute(CATALOG_PATH);
+            Catalog catalog = LoadCommand.execute(CATALOG_PATH);
             System.out.println(catalog);
-        } catch (InvalidCatalogException e) {
+            ReportCommand.execute(catalog);
+        } catch (InvalidCatalogException | TemplateProcessCustomException e) {
             e.printStackTrace();
-            return;
         }
-        ReportCommand.execute(catalog);
     }
 
     public static void main(String[] args) {
         Main app = new Main();
         app.testCreateSave();
-//        app.testLoadView();
+        app.testLoadView();
         app.testReport();
     }
 }
