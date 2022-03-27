@@ -15,13 +15,13 @@ public abstract class Item implements Serializable {
     protected String id;
     protected String title;
     protected String location;
-    protected int year;
+    protected String year;
     protected String author;
     protected Map<String, Item> tags = new HashMap<>();
 
     protected Item() {}
 
-    protected Item(String id, String title, String location, int year, String author, Map<String, Item> tags) {
+    protected Item(String id, String title, String location, String year, String author, Map<String, Item> tags) {
         this.id = id;
         this.title = title;
         this.location = location;
@@ -30,7 +30,7 @@ public abstract class Item implements Serializable {
         this.tags = tags;
     }
 
-    protected Item(String id, String title, String location, int year, String author) {
+    protected Item(String id, String title, String location, String year, String author) {
         this.id = id;
         this.title = title;
         this.location = location;
@@ -50,7 +50,7 @@ public abstract class Item implements Serializable {
         this.location = location;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -74,7 +74,7 @@ public abstract class Item implements Serializable {
         return location;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 

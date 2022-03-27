@@ -1,26 +1,30 @@
 package source;
 
+import com.github.javafaker.Faker;
 import exceptions.InvalidCatalogException;
 import exceptions.TemplateProcessCustomException;
 import filehandler.*;
 import model.Article;
 import model.Book;
 import model.Catalog;
+import java.util.Date;
+import java.util.Calendar;
 
 import java.io.IOException;
 
 public class Main {
     private static final String CATALOG_PATH = "./test_data/Catalog.json";
-
+    private static final Faker faker = new Faker();
     private void testCreateSave() {
         Catalog catalog = new Catalog("MyRefs");
         var book = new Book("knuth67", "The Art of Computer Programming",
-                "./test_data/Book.txt",
-                1955, "Ionel Teodoreanu", "descriere");
+                "./test_data/Book.txt", faker.date().between(new Date(1600, Calendar.FEBRUARY,1),
+                        new Date(2022, Calendar.APRIL,3)).toString(), "Ionel Teodoreanu", "descriere");
 
         var article = new Article("java17", "The Java Language Specification",
                 "https://docs.oracle.com/javase/specs/jls/se17/html/index.html",
-                1955, "Ionel Teodoreanu", 100);
+                faker.date().between(new Date(1600, Calendar.FEBRUARY,1), new Date(2022, Calendar.APRIL,3)).toString(),
+                "Ionel Teodoreanu", 100);
 
         catalog.add(book);
         catalog.add(article);
@@ -59,10 +63,21 @@ public class Main {
         }
     }
 
+    private void testInfo() {
+        try {
+            Catalog catalog = LoadCommand.execute(CATALOG_PATH);
+            for (var item : catalog.getItemList())
+                InfoCommand.execute(item.getLocation());
+        } catch (InvalidCatalogException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         Main app = new Main();
         app.testCreateSave();
         app.testLoadView();
         app.testReport();
+//        app.testInfo();
     }
 }

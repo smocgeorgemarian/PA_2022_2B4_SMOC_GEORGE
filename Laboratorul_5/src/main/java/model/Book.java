@@ -8,12 +8,12 @@ public class Book extends Item {
 
     public Book() {}
 
-    public Book(String id, String title, String location, int year, String author, Map<String, Item> tags, String description) {
+    public Book(String id, String title, String location, String year, String author, Map<String, Item> tags, String description) {
         super(id, title, location, year, author, tags);
         this.description = description;
     }
 
-    public Book(String id, String title, String location, int year, String author, String description) {
+    public Book(String id, String title, String location, String year, String author, String description) {
         super(id, title, location, year, author);
         this.description = description;
     }
