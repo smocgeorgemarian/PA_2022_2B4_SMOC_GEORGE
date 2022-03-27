@@ -2,7 +2,9 @@ package source;
 
 import com.github.javafaker.Faker;
 import exceptions.InvalidCatalogException;
+import exceptions.NotSupportedCustomException;
 import exceptions.TemplateProcessCustomException;
+import exceptions.ViewCustomException;
 import filehandler.*;
 import model.Article;
 import model.Book;
@@ -48,7 +50,7 @@ public class Main {
             ViewCommand.execute(catalog.getItemList().get(0));
             ViewCommand.execute(catalog.getItemList().get(1));
 
-        } catch (IOException e) {
+        } catch (ViewCustomException e) {
             e.printStackTrace();
         }
     }
@@ -68,7 +70,7 @@ public class Main {
             Catalog catalog = LoadCommand.execute(CATALOG_PATH);
             for (var item : catalog.getItemList())
                 InfoCommand.execute(item.getLocation());
-        } catch (InvalidCatalogException e) {
+        } catch (InvalidCatalogException | NotSupportedCustomException e) {
             e.printStackTrace();
         }
     }
@@ -78,6 +80,6 @@ public class Main {
         app.testCreateSave();
         app.testLoadView();
         app.testReport();
-//        app.testInfo();
+        app.testInfo();
     }
 }

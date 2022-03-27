@@ -1,5 +1,6 @@
 package filehandler;
 
+import exceptions.NotSupportedCustomException;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.AutoDetectParser;
@@ -15,7 +16,10 @@ import java.io.IOException;
 public class InfoCommand implements Command {
     private InfoCommand() {}
 
-    public static void execute(String filename) {
+    public static void execute(String filename) throws NotSupportedCustomException{
+        if (filename.contains("html"))
+            throw new NotSupportedCustomException();
+
         Parser parser = new AutoDetectParser();
         BodyContentHandler handler = new BodyContentHandler();
         Metadata metadata = new Metadata();
