@@ -9,6 +9,8 @@ import filehandler.*;
 import model.Article;
 import model.Book;
 import model.Catalog;
+import org.apache.log4j.BasicConfigurator;
+
 import java.util.Date;
 import java.util.Calendar;
 
@@ -76,6 +78,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        BasicConfigurator.configure();
         Main app = new Main();
         app.testCreateSave();
         app.testLoadView();
