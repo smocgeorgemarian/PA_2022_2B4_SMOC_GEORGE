@@ -18,16 +18,16 @@ import java.io.IOException;
 
 public class Main {
     private static final String CATALOG_PATH = "./test_data/Catalog.json";
-    private static final Faker faker = new Faker();
+    private static final Faker FAKER = new Faker();
     private void testCreateSave() {
         Catalog catalog = new Catalog("MyRefs");
         var book = new Book("knuth67", "The Art of Computer Programming",
-                "./test_data/Book.txt", faker.date().between(new Date(1600, Calendar.FEBRUARY,1),
+                "./test_data/Book.txt", FAKER.date().between(new Date(1600, Calendar.FEBRUARY,1),
                         new Date(2022, Calendar.APRIL,3)).toString(), "Ionel Teodoreanu", "descriere");
 
         var article = new Article("java17", "The Java Language Specification",
                 "https://docs.oracle.com/javase/specs/jls/se17/html/index.html",
-                faker.date().between(new Date(1600, Calendar.FEBRUARY,1), new Date(2022, Calendar.APRIL,3)).toString(),
+                FAKER.date().between(new Date(1600, Calendar.FEBRUARY,1), new Date(2022, Calendar.APRIL,3)).toString(),
                 "Ionel Teodoreanu", 100);
 
         catalog.add(book);

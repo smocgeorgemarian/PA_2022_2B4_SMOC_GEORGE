@@ -1,0 +1,18 @@
+
+o
+java:S1450"ZRemove the "gridManager" field and declare it as a local variable in the relevant methods.(ÆÈˆ8
+B
+java:S1948"-Make "gridManager" transient or serializable.(ÆÈˆ8
+C
+java:S1948"-Make "gameManager" transient or serializable.(ºµ°é
+O
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8›ò®Üş/
+[
+java:S1128"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8›ò®Üş/
+\
+java:S1128":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8›ò®Üş/
+Q
+java:S1128	"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8›ò®Üş/
+R
+java:S1128
+"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8›ò®Üş/

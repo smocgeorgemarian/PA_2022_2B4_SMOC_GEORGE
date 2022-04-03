@@ -2,6 +2,8 @@ package model;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MainFrame extends JFrame {
     private ConfigPanel configPanel;
@@ -33,7 +35,6 @@ public class MainFrame extends JFrame {
         add(configPanel, BorderLayout.NORTH);
         add(canvas, BorderLayout.CENTER);
         add(controlPanel, BorderLayout.SOUTH);
-
         pack();
     }
 
