@@ -36,14 +36,6 @@ public class ControlPanel extends JPanel {
         frame.dispose();
     }
     private void exportGame(ActionEvent e) {
-        BufferedImage image = new BufferedImage(frame.getCanvas().getWidth(), frame.getCanvas().getHeight(), BufferedImage.TYPE_INT_RGB);
-        Graphics2D g = image.createGraphics();
-        g.dispose();
-        try {
-            ImageIO.write(image, "jpg", new File("Paint.jpg"));
-            ImageIO.write(image, "png", new File("Paint.png"));
-        } catch (IOException exp) {
-            exp.printStackTrace();
-        }
+        this.frame.getCanvas().exportDrawingPanel();
     }
 }

@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class DrawingPanel extends JPanel {
     private int padY;
     private GameManager gameManager;
     private final int stoneSize;
+
     public DrawingPanel(MainFrame frame, int canvasWidth, int canvasHeight, int stoneSize) {
         this.frame = frame;
         this.canvasWidth = Math.max(canvasWidth - 200, 400);
@@ -127,6 +129,17 @@ public class DrawingPanel extends JPanel {
                 g.setColor(Color.LIGHT_GRAY);
                 g.drawOval(x - stoneSize / 2, y - stoneSize / 2, stoneSize, stoneSize);
             }
+        }
+    }
+
+    public void exportDrawingPanel() {
+        BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
+        Graphics2D g = image.createGraphics();
+        paint(g);
+        try {
+            ImageIO.write(image, "jpg", new File("Paint.jpg"));
+        } catch (IOException exp) {
+            exp.printStackTrace();
         }
     }
 }
