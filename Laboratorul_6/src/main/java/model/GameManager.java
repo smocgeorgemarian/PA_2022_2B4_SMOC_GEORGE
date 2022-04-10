@@ -1,7 +1,8 @@
 package model;
+import java.io.Serializable;
 import java.util.Set;
 
-public class GameManager {
+public class GameManager implements Serializable {
     private final int rows;
     private final int columns;
     private int numberOfMoves;

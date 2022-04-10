@@ -1,3 +1,7 @@
 
-J
-java:S3740"/Provide the parametrized type for this generic.(ÃÙ™“ùÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿ð·´øÿÿÿÿ
+X
+java:S18543"BRemove this useless assignment to local variable "lettersManager".(ÊÒ¤ß
+N
+java:S14811"3Remove this unused "lettersManager" local variable.(À¸ƒ‡üÿÿÿÿ

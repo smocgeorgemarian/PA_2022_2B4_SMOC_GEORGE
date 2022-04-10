@@ -1,5 +1,7 @@
 package model;
 
+import main.Game;
+
 import java.util.List;
 
 public class Player implements Runnable {
@@ -14,8 +16,8 @@ public class Player implements Runnable {
         if (position == tilesUsed.length + 1) {
             StringBuilder sb = new StringBuilder();
             for (int extractIndex = 0; extractIndex < extracted.size(); extractIndex++) {
-                if (!tilesUsed[extractIndex])
-                    sb.append(extracted.get(extractIndex));
+                if (tilesUsed[extractIndex])
+                    sb.append(extracted.get(extractIndex).getLetter());
             }
             if (this.game.getDictionary().isWord(sb.toString()))
                 acceptedString = sb.toString();
@@ -42,14 +44,17 @@ public class Player implements Runnable {
 
     private boolean submitWord() {
         List<Tile> extracted = game.getBag().extractTiles(7);
-        if (extracted.isEmpty()) {
+        if (extracted.isEmpty())
             return false;
-        }
         String acceptedWord = getAcceptedWord(extracted);
         if (acceptedWord.equals(NO_ACCEPTED))
             return false;
         game.getBoard().addWord(this, acceptedWord);
-        Thread.sleep(50);
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return true;
     }
 
@@ -64,5 +69,24 @@ public class Player implements Runnable {
     public boolean isRunning() {
         return running;
     }
-//    implement the run method;
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
+
+    public void setAcceptedString(String acceptedString) {
+        this.acceptedString = acceptedString;
+    }
+
+    @Override
+    public void run() {
+        running = true;
+        while (running) {
+            submitWord();
+        }
+    }
 }

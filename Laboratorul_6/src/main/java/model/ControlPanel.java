@@ -16,6 +16,7 @@ public class ControlPanel extends JPanel {
     private final JButton saveBtn = new JButton("Save");
     private final JButton exitBtn = new JButton("Exit");
     private final JButton exportBtn = new JButton("Export");
+
     private static final String CANVAS_PATH = "./canvas.png";
     private static final String FORMAT = "png";
 
@@ -31,6 +32,7 @@ public class ControlPanel extends JPanel {
         //configure listeners for all buttons
         exitBtn.addActionListener(this::exitGame);
         exportBtn.addActionListener(this::exportGame);
+//        saveBtn.addActionListener(this::saveGame);
     }
     private void exitGame(ActionEvent e) {
         frame.dispose();
@@ -38,4 +40,5 @@ public class ControlPanel extends JPanel {
     private void exportGame(ActionEvent e) {
         this.frame.getCanvas().exportDrawingPanel();
     }
+//    private void saveGame(ActionEvent e) {this.}
 }
