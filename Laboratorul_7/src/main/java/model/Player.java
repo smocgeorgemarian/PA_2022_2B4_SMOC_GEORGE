@@ -2,60 +2,96 @@ package model;
 
 import main.Game;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Player implements Runnable {
+    private static final int NO_ROUND_TILES = 7;
     private static final String NO_ACCEPTED = "_NO_ACCEPTED";
+
     private final String name;
     private Game game;
     private boolean running;
-    private String acceptedString;
+
+    private String acceptedString = "";
+    private boolean foundMaxSizeWord;
+    private boolean[] tilesUsed = new boolean[7];
+    private List<Tile> actualTilesList = new ArrayList<>();
+    private List<Integer> finalSelectedIndexList = new ArrayList<>();
+    private List<Integer> selectedIndexList = new ArrayList<>();
+
     public Player(String name) { this.name = name; }
 
-    private void dfs(int position, List<Tile> extracted, boolean[] tilesUsed) {
+    private String getCurrentString(List<Integer> selectedIndexList) {
+        StringBuilder sb = new StringBuilder();
+        for (var index: selectedIndexList) {
+            sb.append(actualTilesList.get(index).getLetter());
+        }
+        return sb.toString();
+    }
+
+    private void dfs(int position) {
+        String currentString = getCurrentString(selectedIndexList);
+        if (game.getDictionary().isWord(currentString)) {
+            acceptedString = currentString;
+            finalSelectedIndexList = new ArrayList<>(selectedIndexList);
+        }
+
         if (position == tilesUsed.length + 1) {
-            StringBuilder sb = new StringBuilder();
-            for (int extractIndex = 0; extractIndex < extracted.size(); extractIndex++) {
-                if (tilesUsed[extractIndex])
-                    sb.append(extracted.get(extractIndex).getLetter());
-            }
-            if (this.game.getDictionary().isWord(sb.toString()))
-                acceptedString = sb.toString();
+            if (!acceptedString.equals(NO_ACCEPTED))
+                foundMaxSizeWord = true;
             return;
         }
 
-        for (int i = 0; i < tilesUsed.length; i++) {
+        for (int i = 0; i < actualTilesList.size(); i++) {
             if (!tilesUsed[i]) {
                 tilesUsed[i] = true;
-                dfs(position + 1, extracted, tilesUsed);
-                if (!acceptedString.equals(NO_ACCEPTED))
+                selectedIndexList.add(i);
+
+                dfs(position + 1);
+                if (foundMaxSizeWord)
                     return;
+
+                selectedIndexList.remove(selectedIndexList.size() - 1);
                 tilesUsed[i] = false;
             }
         }
     }
 
-    private String getAcceptedWord(List<Tile> extracted) {
-        boolean[] tilesUsed = new boolean[extracted.size()];
+    private void setAcceptedWord() {
         acceptedString = NO_ACCEPTED;
-        dfs(1, extracted, tilesUsed);
-        return acceptedString;
+        foundMaxSizeWord = false;
+        selectedIndexList = new ArrayList<>();
+        tilesUsed = new boolean[NO_ROUND_TILES];
+        dfs(1);
     }
 
-    private boolean submitWord() {
-        List<Tile> extracted = game.getBag().extractTiles(7);
-        if (extracted.isEmpty())
-            return false;
-        String acceptedWord = getAcceptedWord(extracted);
-        if (acceptedWord.equals(NO_ACCEPTED))
-            return false;
-        game.getBoard().addWord(this, acceptedWord);
+    private void submitWord() {
+        if (acceptedString.equals(NO_ACCEPTED))
+            actualTilesList = game.getBag().extractTiles(NO_ROUND_TILES);
+        else {
+            List<Tile> newTilesList = new ArrayList<>();
+            List<Tile> addedTilesList = game.getBag().extractTiles(NO_ROUND_TILES - acceptedString.length());
+            for (int tileIndex = 0; tileIndex < actualTilesList.size(); tileIndex++)
+                if (!finalSelectedIndexList.contains(tileIndex))
+                    newTilesList.add(actualTilesList.get(tileIndex));
+
+            actualTilesList = new ArrayList<>(newTilesList);
+            actualTilesList.addAll(addedTilesList);
+        }
+        if (actualTilesList.isEmpty())
+            return;
+
+        setAcceptedWord();
+        if (acceptedString.equals(NO_ACCEPTED))
+            return;
+        game.getBoard().addWord(this, acceptedString);
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
-        return true;
     }
 
     public String getName() {
@@ -83,10 +119,36 @@ public class Player implements Runnable {
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         running = true;
+        int numberOfPlayers = game.getNumberOfPlayers();
+        int playerIndex = game.getPlayerIndex(this);
+        notifyAll();
         while (running) {
-            submitWord();
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                return;
+            }
+            System.out.println(game.getTurnIndex());
+            if (game.getTurnIndex() % numberOfPlayers == playerIndex) {
+                submitWord();
+                notifyAll();
+            }
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return name.equals(player.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
