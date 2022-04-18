@@ -8,40 +8,29 @@ import model.Player;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimerTask;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Game {
     private static final int TIME_LIMIT = 4;
     private static final String DICTIONARY_PATH = "dictionary.txt";
+
     private final Bag bag;
     private final Board board;
     private final MockDictionary dictionary;
     private final List<Player> players;
+
     private int numberOfPlayers;
-    private int playerTurn = 0;
-    private LinkedBlockingQueue<Player> blockingQueue = new LinkedBlockingQueue<>(1);
+    private int turnIndex;
+
+    private final LinkedBlockingQueue<Player> blockingQueue = new LinkedBlockingQueue<>(1);
     private final Object lock = new Object();
 
-    public LinkedBlockingQueue<Player> getBlockingQueue() {
-        return blockingQueue;
-    }
-
-    public int getPlayerTurn() {
-        return playerTurn;
-    }
-
-    public void increasePlayerTurn() {
-        playerTurn = (playerTurn + 1) % numberOfPlayers;
-    }
 
     public Game() {
         numberOfPlayers = 0;
         bag = new Bag();
-        bag.tmpFill();
 
         board = new Board();
         dictionary = new MockDictionary();
@@ -53,8 +42,8 @@ public class Game {
         }
         System.out.println(dictionary);
         players = new ArrayList<>();
-
     }
+
     public void addPlayer(Player player) {
         numberOfPlayers++;
         players.add(player);
@@ -89,7 +78,7 @@ public class Game {
             player.setRunning(false);
         }
         System.out.println("reached");
-        board.setResultsPrintabe();
+        board.setResultsPrintable();
     }
 
     private void startTimer(){
@@ -130,6 +119,18 @@ public class Game {
                 return index;
         }
         return -1;
+    }
+
+    public int getTurnIndex() {
+        return turnIndex;
+    }
+
+    public void setIncreasedIndex() {
+        turnIndex = (turnIndex + 1) % numberOfPlayers;
+    }
+
+    public LinkedBlockingQueue<Player> getBlockingQueue() {
+        return blockingQueue;
     }
 }
 
