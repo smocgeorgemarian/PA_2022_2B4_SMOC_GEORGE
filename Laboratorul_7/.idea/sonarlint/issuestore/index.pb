@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
@@ -13,3 +14,5 @@ M
 src/main/java/model/Game.java,d\a\da333d770c23ebdaf029ed7a0be21b2b57a76583
 O
 src/main/java/model/Player.java,a\c\acd45f8af9f55b18ec00f990e02da3916854b552
+=======
+>>>>>>> Stashed changes
