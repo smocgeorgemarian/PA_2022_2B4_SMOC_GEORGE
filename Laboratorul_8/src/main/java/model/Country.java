@@ -1,12 +1,12 @@
-package administrator;
+package model;
 
 public class Country {
     private int id;
     private String name;
     private String code;
-    private int continent;
+    private String continent;
 
-    public Country(int id, String name, String code, int continent) {
+    public Country(int id, String name, String code, String continent) {
         this.id = id;
         this.name = name;
         this.code = code;
@@ -19,7 +19,7 @@ public class Country {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +
-                ", continent=" + continent +
+                ", continent='" + continent + '\'' +
                 '}';
     }
 }

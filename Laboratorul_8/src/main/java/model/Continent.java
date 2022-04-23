@@ -1,4 +1,4 @@
-package administrator;
+package model;
 
 public class Continent {
     private int id;

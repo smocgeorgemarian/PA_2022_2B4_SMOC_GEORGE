@@ -1,0 +1,15 @@
+
+a	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(ΌÿΎΉÿÿÿÿÿ
+?
+java:S54135")Verify that "remove()" is used correctly.(α³—
+t
+java:S2142\"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+t
+java:S2142~"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+z
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(θ®γ¶ψÿÿÿÿ
+u
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+G
+java:S2446‘"0"notify" may not wake up the appropriate thread.(΄Ι΄θ
+^	java:S125“"<This block of commented-out lines of code should be removed.(ρ¥ωψÿÿÿÿ8μνΉζƒ0
