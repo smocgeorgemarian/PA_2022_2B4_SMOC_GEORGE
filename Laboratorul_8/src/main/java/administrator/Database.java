@@ -11,10 +11,13 @@ public class Database {
     private static final String PASSWORD = "STUDENT";
     private static Connection connection = null;
     private Database() {}
+
     public static Connection getConnection() {
-        createConnection();
+        if (connection == null)
+            createConnection();
         return connection;
     }
+
     private static void createConnection() {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -23,6 +26,7 @@ public class Database {
             System.err.println(e);
         }
     }
+
     public static void closeConnection() throws SQLException {
         if (connection != null)
             connection.close();

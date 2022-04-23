@@ -17,7 +17,6 @@
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc</artifactId>
             <version>11</version>
-            <scope>system</scope>
             <systemPath>C:/Users/GeorgeS/Downloads/ojdbc11.jar</systemPath>
         </dependency>
 

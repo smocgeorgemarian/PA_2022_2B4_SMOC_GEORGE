@@ -1,10 +1,9 @@
 package application;
 
-import administrator.CSVParserTool;
+import administrator.*;
+import model.City;
 import model.Continent;
-import administrator.ContinentDAO;
 import model.Country;
-import administrator.CountryDAO;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,7 +23,7 @@ public class Main {
 
         for (var continent: continents)
             continentDAO.create(continent);
-
+        Database.getConnection().commit();
         Continent continent = continentDAO.findByName(CONTINENT + "0");
         System.out.println(continent);
         continent = continentDAO.findById(2);
@@ -42,6 +41,7 @@ public class Main {
 
         for (int i = 0; i < countries.length; i++)
             countryDAO.create(countries[i], codes[i], CONTINENT + i);
+        Database.getConnection().commit();
 
         Country country = countryDAO.findByCode(CODE + "1");
         System.out.println(country);
@@ -52,19 +52,30 @@ public class Main {
     }
 
     private static void testParserTool() throws IOException {
-        CSVParserTool.parseFile("concap.csv");
+        try {
+            CSVParserTool.parseFileIntoDatabase("concap.csv");
+            Database.getConnection().commit();
+
+            CityDAO cityDAO = new CityDAO();
+
+            City firstCity = cityDAO.findById(1);
+            City secondCity = cityDAO.findByName("Funafuti");
+            System.out.println("First city: " + firstCity + "\nSecond city: " + secondCity);
+            System.out.println("Distance between these cities: "
+                    + DistanceCalculator.computeDistance(firstCity, secondCity) + "km");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
         try {
             testContinentDAO();
             testCountriesDAO();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        try {
             testParserTool();
-        } catch (IOException e) {
+            Database.closeConnection();
+        } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
     }

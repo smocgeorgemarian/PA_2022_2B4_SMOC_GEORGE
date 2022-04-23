@@ -12,15 +12,12 @@ public class ContinentDAO {
             pstmt.setString(1, name);
             pstmt.executeUpdate();
         }
-        con.commit();
-        con.close();
     }
 
-    private Continent getContinentByResultSet(ResultSet rs, Connection con) throws SQLException {
+    private Continent getContinentByResultSet(ResultSet rs) throws SQLException {
         boolean hasNext = rs.next();
         int id = hasNext ? rs.getInt("id") : -1;
         String name = hasNext ? rs.getString("name") : null;
-        con.close();
         if (id == -1)
             return null;
         return new Continent(id, name);
@@ -31,7 +28,7 @@ public class ContinentDAO {
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(
                      "select * from continents where name='" + name + "'")) {
-            return getContinentByResultSet(rs, con);
+            return getContinentByResultSet(rs);
         }
     }
     public Continent findById(int id) throws SQLException {
@@ -39,7 +36,7 @@ public class ContinentDAO {
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(
                      "select * from continents where id='" + id + "'")) {
-            return getContinentByResultSet(rs, con);
+            return getContinentByResultSet(rs);
         }
     }
 }
