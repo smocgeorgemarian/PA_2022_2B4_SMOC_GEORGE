@@ -1,0 +1,2 @@
+1. vezi daca poti pune graphics ca variabila globala?
+2. resizeble sau nu

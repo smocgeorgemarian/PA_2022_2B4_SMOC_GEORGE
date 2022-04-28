@@ -3,8 +3,8 @@ o
 java:S1450"ZRemove the "gridManager" field and declare it as a local variable in the relevant methods.(ÆÈˆ8
 B
 java:S1948"-Make "gridManager" transient or serializable.(ÆÈˆ8
-\
-java:S1128	":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8¯à‰ÿ/
-Q
+U
+java:S1128	":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ
+J
 java:S1128
-"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8¯à‰ÿ/
+"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg

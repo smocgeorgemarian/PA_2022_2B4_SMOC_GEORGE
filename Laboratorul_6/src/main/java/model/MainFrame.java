@@ -25,16 +25,16 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(this.width, this.height));
 
-        controlPanel = new ControlPanel(this);
-        configPanel = new ConfigPanel(this);
-        canvas = new DrawingPanel(this, this.width, this.height, this.stoneSize);
-
-        Frame f = new Frame("Grid Layout");
-        f.setLayout (new GridLayout (3, 2));
-
-        add(configPanel, BorderLayout.NORTH);
-        add(canvas, BorderLayout.CENTER);
-        add(controlPanel, BorderLayout.SOUTH);
+//        controlPanel = new ControlPanel(this);
+//        configPanel = new ConfigPanel(this);
+//        canvas = new DrawingPanel(this, this.width, this.height, this.stoneSize);
+//
+//        Frame f = new Frame("Grid Layout");
+//        f.setLayout (new GridLayout (3, 2));
+//
+//        add(configPanel, BorderLayout.NORTH);
+//        add(canvas, BorderLayout.CENTER);
+//        add(controlPanel, BorderLayout.SOUTH);
         pack();
     }
 

@@ -1,6 +1,7 @@
 package application;
 
 import administrator.*;
+import graphic.MainFrame;
 import model.City;
 import model.Continent;
 import model.Country;
@@ -14,6 +15,7 @@ public class Main {
     private static final String CODE = "code";
     private static final String COUNTRY = "country";
 
+    private static final int MAX_CITIES = 245;
 
     private static void testContinentDAO() throws SQLException {
         ContinentDAO continentDAO = new ContinentDAO();
@@ -57,7 +59,6 @@ public class Main {
             Database.getConnection().commit();
 
             CityDAO cityDAO = new CityDAO();
-
             City firstCity = cityDAO.findById(1);
             City secondCity = cityDAO.findByName("Funafuti");
             System.out.println("First city: " + firstCity + "\nSecond city: " + secondCity);
@@ -69,11 +70,27 @@ public class Main {
         }
     }
 
+    private static void testGraphicInterface() {
+        CityDAO cityDAO = new CityDAO();
+        var cityList = IntStream.range(1, MAX_CITIES)
+                .mapToObj(id -> {
+                    try {
+                        return cityDAO.findById(id);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                        return null;
+                    }
+                }).toList();
+
+        new MainFrame(1000, 1600, cityList).setVisible(true);
+    }
+
     public static void main(String[] args) {
         try {
             testContinentDAO();
             testCountriesDAO();
             testParserTool();
+            testGraphicInterface();
             Database.closeConnection();
         } catch (IOException | SQLException e) {
             e.printStackTrace();

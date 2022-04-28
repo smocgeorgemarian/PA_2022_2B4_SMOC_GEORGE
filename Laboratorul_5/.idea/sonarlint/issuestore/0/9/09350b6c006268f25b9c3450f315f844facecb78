@@ -7,5 +7,3 @@ N
 java:S1874",Remove this use of "Date"; it is deprecated.(ì¢ú¯úÿÿÿÿ8£º£ƒý/
 N
 java:S1874",Remove this use of "Date"; it is deprecated.(ì¢ú¯úÿÿÿÿ8£º£ƒý/
-Z	java:S106."9Replace this use of System.out or System.err by a logger.(¨š¹¾úÿÿÿÿ8¢¸Ò£ÿ/
-Z	java:S106?"9Replace this use of System.out or System.err by a logger.(¨š¹¾úÿÿÿÿ8¥¸Ò£ÿ/
