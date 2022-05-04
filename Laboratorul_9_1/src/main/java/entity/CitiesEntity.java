@@ -6,9 +6,15 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "CITIES", schema = "STUDENT")
+@NamedQueries({
+        @NamedQuery(name = "CitiesEntities.findAll",
+                query = "select e from CitiesEntity e order by e.name"),
+        @NamedQuery(name = "CitiesEntities.findByCountry",
+                query = "select e from CitiesEntity e where e.country = :country")
+        })
+
 public class CitiesEntity {
     @Id
-    @Basic
     @Column(name = "ID")
     private BigInteger id;
     @Basic

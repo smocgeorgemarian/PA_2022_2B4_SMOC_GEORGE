@@ -7,6 +7,17 @@ import java.util.Objects;
 @Entity
 @Table(name = "COUNTRIES", schema = "STUDENT")
 public class CountriesEntity {
+
+    public CountriesEntity() {
+    }
+
+    public CountriesEntity(BigInteger id, String name, String code, String continent) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.continent = continent;
+    }
+
     @Id
     @Basic
     @Column(name = "ID")

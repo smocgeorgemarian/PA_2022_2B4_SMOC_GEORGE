@@ -12,8 +12,8 @@ import java.util.List;
 
 public class ImagePanel extends JPanel {
     private static final String MAP_OF_WORLD = "mapOfWorld.jpg";
-    private static final int MAP_HEIGHT = 567;
-    private static final int MAP_WIDTH = 800;
+    private static final int MAP_HEIGHT = 420;
+    private static final int MAP_WIDTH = 700;
     private static final int CITY_SIZE = 10;
 
     private final List<City> cityList;

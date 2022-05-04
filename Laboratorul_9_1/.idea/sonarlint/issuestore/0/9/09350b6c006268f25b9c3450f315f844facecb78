@@ -1,0 +1,11 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¼£¨Þûÿÿÿÿ8¹Å÷¬ˆ0
+X	java:S125"<This block of commented-out lines of code should be removed.(”†É¡8Ã½…­ˆ0
+R
+java:S1128"0Remove this unused import 'entity.CitiesEntity'.(§º§‚øÿÿÿÿ8Ä½…­ˆ0
+P
+java:S1128"3Remove this unused import 'entity.CountriesEntity'.(¢‡®Ý8Å½…­ˆ0
+U
+java:S1128"3Remove this unused import 'manager.CityRepository'.(ŒÀ³Ÿøÿÿÿÿ8Å½…­ˆ0
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Å½…­ˆ0

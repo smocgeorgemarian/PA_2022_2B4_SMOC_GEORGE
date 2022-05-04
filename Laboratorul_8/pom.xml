@@ -13,13 +13,26 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>11</version>
-            <systemPath>C:/Users/GeorgeS/Downloads/ojdbc11.jar</systemPath>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc14 -->
+<!--        <dependency>-->
+<!--            <groupId>com.oracle.jdbc</groupId>-->
+<!--            <artifactId>ojdbc14</artifactId>-->
+<!--            <version>10.2.0.3.0</version>-->
+<!--        </dependency>-->
 
+        <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
+<!--        <dependency>-->
+<!--            <groupId>com.oracle.jdbc</groupId>-->
+<!--            <artifactId>ojdbc8</artifactId>-->
+<!--            <version>19.3.0.0</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.oracle</groupId>-->
+<!--            <artifactId>ojdbc</artifactId>-->
+<!--            <version>11</version>-->
+<!--&lt;!&ndash;            <systemPath>H:/Anul 2/Limbaje formale, automate si compilatoare/ojdbc11.jar</systemPath>&ndash;&gt;-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>

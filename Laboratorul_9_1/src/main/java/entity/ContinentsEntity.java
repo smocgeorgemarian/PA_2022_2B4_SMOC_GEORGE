@@ -8,12 +8,17 @@ import java.util.Objects;
 @Table(name = "CONTINENTS", schema = "STUDENT")
 public class ContinentsEntity {
     @Id
-    @Basic
     @Column(name = "ID")
     private BigInteger id;
     @Basic
     @Column(name = "NAME")
     private String name;
+
+    public ContinentsEntity(BigInteger id, String name) {this.id = id;this.name = name;}
+
+    public ContinentsEntity(String name) {this.name = name;}
+
+    public ContinentsEntity() {}
 
     public BigInteger getId() {
         return id;
