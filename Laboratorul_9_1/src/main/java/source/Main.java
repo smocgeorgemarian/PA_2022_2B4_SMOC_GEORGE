@@ -1,38 +1,33 @@
 package source;
 
-import entity.CitiesEntity;
 import entity.ContinentsEntity;
-import entity.CountriesEntity;
-import manager.CityRepository;
+import manager.ContinentsRepository;
+import manager.FactoryManager;
+import test.TestEntities;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.math.BigInteger;
-import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
+    public static void testCityRepository(EntityManager em) {
+        em.getTransaction().begin();
+        ContinentsRepository continentsRepository = new ContinentsRepository(em);
+        System.out.println(continentsRepository.findById(BigInteger.valueOf(104)));
+        em.getTransaction().commit();
+    }
+
     public static void main(String[] args) {
-        EntityManagerFactory emf =
-                Persistence.createEntityManagerFactory("ExamplePU");
+        EntityManagerFactory emf = FactoryManager.getEntityManagerFactory();
         EntityManager em = emf.createEntityManager();
 
-        em.getTransaction().begin();
-        ContinentsEntity continent = new ContinentsEntity(BigInteger.valueOf(100), "Europe");
-        System.out.println(continent);
-        em.persist(continent);
+        TestEntities.testContinentsEntity(em);
+        TestEntities.testCountriesEntity(em);
+        TestEntities.testCitiesEntity(em);
 
-        ContinentsEntity c = (ContinentsEntity) em.createQuery(
-                        "select e from ContinentsEntity e where e.name='Europe'")
-                .getSingleResult();
-        c.setName("Africa");
-        em.getTransaction().commit();
+//        testCityRepository(em);
 
-//        CityRepository cityRepository = new CityRepository(emf);
-//        CountriesEntity countriesEntity = new CountriesEntity(BigInteger.valueOf(1), "country0", "code0", "continent0");
-//        List<CitiesEntity> citiesEntityList = cityRepository.findByCountry(countriesEntity);
-//        for (CitiesEntity citiesEntity: citiesEntityList)
-//            System.out.println(citiesEntity);
         em.close();
         emf.close();
     }

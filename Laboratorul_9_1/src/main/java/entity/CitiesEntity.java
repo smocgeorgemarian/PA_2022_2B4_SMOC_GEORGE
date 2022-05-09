@@ -7,15 +7,16 @@ import java.util.Objects;
 @Entity
 @Table(name = "CITIES", schema = "STUDENT")
 @NamedQueries({
-        @NamedQuery(name = "CitiesEntities.findAll",
-                query = "select e from CitiesEntity e order by e.name"),
-        @NamedQuery(name = "CitiesEntities.findByCountry",
-                query = "select e from CitiesEntity e where e.country = :country")
+        @NamedQuery(name = "CitiesEntities.findById",
+                query = "select e from CitiesEntity e where e.id = :id"),
+        @NamedQuery(name = "CitiesEntities.findByName",
+                query = "select e from CitiesEntity e where e.name = :name")
         })
 
-public class CitiesEntity {
+public class CitiesEntity implements AbstractEntity{
     @Id
     @Column(name = "ID")
+//    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private BigInteger id;
     @Basic
     @Column(name = "COUNTRY")
@@ -32,6 +33,27 @@ public class CitiesEntity {
     @Basic
     @Column(name = "LONGITUDE")
     private Double longitude;
+
+    @Basic
+    @Column(name = "POPULATION")
+    private BigInteger population;
+
+    public CitiesEntity() {}
+
+    public CitiesEntity(BigInteger id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public CitiesEntity(BigInteger id, String country, String name, Boolean capital, Double latitude, Double longitude, BigInteger population) {
+        this.id = id;
+        this.country = country;
+        this.name = name;
+        this.capital = capital;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.population = population;
+    }
 
     public BigInteger getId() {
         return id;

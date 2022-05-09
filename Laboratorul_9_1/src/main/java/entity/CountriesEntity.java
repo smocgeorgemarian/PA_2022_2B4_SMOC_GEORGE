@@ -2,25 +2,22 @@ package entity;
 
 import javax.persistence.*;
 import java.math.BigInteger;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "COUNTRIES", schema = "STUDENT")
-public class CountriesEntity {
-
-    public CountriesEntity() {
-    }
-
-    public CountriesEntity(BigInteger id, String name, String code, String continent) {
-        this.id = id;
-        this.name = name;
-        this.code = code;
-        this.continent = continent;
-    }
-
+@NamedQueries({
+        @NamedQuery(name = "CountriesEntities.findById",
+                query = "select e from CountriesEntity e where e.id = :id"),
+        @NamedQuery(name = "CountriesEntities.findByName",
+                query = "select e from CountriesEntity e where e.name = :name")
+})
+public class CountriesEntity implements AbstractEntity {
     @Id
-    @Basic
     @Column(name = "ID")
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Basic
     private BigInteger id;
     @Basic
     @Column(name = "NAME")
@@ -31,6 +28,24 @@ public class CountriesEntity {
     @Basic
     @Column(name = "CONTINENT")
     private String continent;
+    @OneToMany(targetEntity = CitiesEntity.class, cascade = CascadeType.ALL)
+    @JoinColumn(name="COUNTRY", referencedColumnName = "NAME")
+    private List<CitiesEntity> citiesEntityList;
+
+    public CountriesEntity() {
+    }
+
+    public CountriesEntity(BigInteger id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public CountriesEntity(BigInteger id, String name, String code, String continent) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.continent = continent;
+    }
 
     public BigInteger getId() {
         return id;

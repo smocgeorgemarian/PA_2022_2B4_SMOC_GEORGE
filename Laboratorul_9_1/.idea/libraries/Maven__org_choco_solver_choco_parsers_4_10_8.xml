@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.choco-solver:choco-parsers:4.10.8">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/choco-solver/choco-parsers/4.10.8/choco-parsers-4.10.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/choco-solver/choco-parsers/4.10.8/choco-parsers-4.10.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/choco-solver/choco-parsers/4.10.8/choco-parsers-4.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
