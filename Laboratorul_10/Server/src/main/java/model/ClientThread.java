@@ -10,6 +10,8 @@ import java.net.Socket;
 class ClientThread extends Thread {
     private final Socket socket;
     private final SimpleServer simpleServer;
+    private static final String SRV_STOP = "Server stopped";
+    private static final String SRV_EXIT = "Server received the request exit";
     public ClientThread (Socket socket, SimpleServer simpleServer) {
         this.socket = socket ;
         this.simpleServer = simpleServer;
@@ -32,21 +34,26 @@ class ClientThread extends Thread {
                 String request = in.readLine();
                 String answer;
                 boolean hasToStop = false;
+                boolean hasToExit = false;
                 if (request.equals("stop")) {
-                    answer = "Server stopped";
+                    answer = SRV_STOP;
                     hasToStop = true;
-                } else if (request.equals("close")) {
-                    answer = "Server received the request " + request;
-                    hasToStop = true;
+                } else if (request.equals("exit")) {
+                    answer = SRV_EXIT;
+                    hasToExit = true;
                 } else
                     answer = "Server received the request " + request;
 
                 PrintWriter out = new PrintWriter(socket.getOutputStream());
                 out.println(answer);
                 out.flush();
+                if (hasToExit) {
+                    closeSocket();
+                    break;
+                }
                 if (hasToStop) {
                     closeSocket();
-                    return;
+                    System.exit(0);
                 }
             } catch (IOException e) {
                 System.err.println("Communication error... " + e);

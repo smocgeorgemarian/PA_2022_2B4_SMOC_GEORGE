@@ -1,0 +1,7 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(√ú·ê
+Q	java:S125"<This block of commented-out lines of code should be removed.(¯ìãÙ
+O
+java:S1128"4Remove this unused import 'entity.ContinentsEntity'.(›¨≥À¯ˇˇˇˇ
+R
+java:S1128"7Remove this unused import 'java.util.stream.IntStream'.(Ÿ…Ωü˘ˇˇˇˇ

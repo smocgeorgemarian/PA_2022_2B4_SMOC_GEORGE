@@ -52,3 +52,9 @@ May 09, 2022 2:21:17 PM test.TestTimeLogger setDataPrintableIntoFile
 INFO: Delta time: 1138297300
 May 09, 2022 2:21:19 PM test.TestTimeLogger setDataPrintableIntoFile
 INFO: Delta time: 1682409500
+May 09, 2022 6:43:28 PM test.TestTimeLogger setDataPrintableIntoFile
+INFO: Delta time: 849955000
+May 09, 2022 6:43:29 PM test.TestTimeLogger setDataPrintableIntoFile
+INFO: Delta time: 1069628100
+May 09, 2022 6:43:31 PM test.TestTimeLogger setDataPrintableIntoFile
+INFO: Delta time: 1582404200

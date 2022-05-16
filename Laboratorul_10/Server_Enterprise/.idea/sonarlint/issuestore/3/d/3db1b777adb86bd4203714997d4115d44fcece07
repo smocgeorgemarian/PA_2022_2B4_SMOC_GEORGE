@@ -1,0 +1,10 @@
+
+V
+java:S1854"";Remove this useless assignment to local variable "command".(ˆçÎòÿÿÿÿÿ
+V
+java:S1117"";Rename "command" which hides the field declared at line 19.(ˆçÎòÿÿÿÿÿ
+G
+java:S1481"",Remove this unused "command" local variable.(ˆçÎòÿÿÿÿÿ
+<	java:S1312""Add a default case to this switch.(¸ìù«üÿÿÿÿ
+M
+java:S1068"2Remove this unused "commandKeyword" private field.(¦ˆ¬“üÿÿÿÿ

@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class SimpleClient {
     private static final String serverAddress = "127.0.0.1"; // The server's IP address
-    private static final String SRV_STOP = "Server stopped";
-    private static final String SRV_CLOSED = "Server received the request close";
+    private static final String SRV_STOP = "[answer] Command stop executed successfully";
+    private static final String SRV_EXIT = "[answer] Command exit executed successfully";
     private static final int PORT = 8100; // The server's port
     public static void main (String[] args) throws IOException {
         try (   Socket socket = new Socket(serverAddress, PORT);
@@ -27,10 +28,10 @@ public class SimpleClient {
 
                 String response = in.readLine();
                 System.out.println(response);
-                if (response.equals(SRV_STOP) || response.equals(SRV_CLOSED))
+                if (response.equals(SRV_STOP) || response.equals(SRV_EXIT))
                     return;
             }
-        } catch (UnknownHostException e) {
+        } catch (UnknownHostException | SocketException e) {
             System.err.println("No server listening... " + e);
         }
     }

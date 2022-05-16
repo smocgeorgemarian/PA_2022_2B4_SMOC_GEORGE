@@ -1,9 +1,11 @@
 
-N	java:S106"9Replace this use of System.out or System.err by a logger.(µ¿ç‚
-N	java:S106"9Replace this use of System.out or System.err by a logger.(È½¨
-U
-java:S1854":Remove this useless assignment to local variable "server".(õæö¸ıÿÿÿÿ
-‚
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø
-F
-java:S1481"+Remove this unused "server" local variable.(õæö¸ıÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(µ¿ç‚8èêëŒ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(È½¨8êêëŒ0
+\
+java:S1854":Remove this useless assignment to local variable "server".(õæö¸ıÿÿÿÿ8ëêëŒ0
+‰
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8ëêëŒ0
+M
+java:S1481"+Remove this unused "server" local variable.(õæö¸ıÿÿÿÿ8ìêëŒ0
+D
+java:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8óêëŒ0

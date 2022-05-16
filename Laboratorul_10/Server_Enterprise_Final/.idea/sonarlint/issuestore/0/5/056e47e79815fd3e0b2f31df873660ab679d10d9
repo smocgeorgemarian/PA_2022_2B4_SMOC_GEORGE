@@ -1,0 +1,8 @@
+
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(µ¿ç‚8Ë‡³áŒ0
+T	java:S106+"9Replace this use of System.out or System.err by a logger.(¡Í¾G8Î‡³áŒ0
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(ÈŽ½¨8Ï‡³áŒ0
+W
+java:S1141%"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ñ‡³áŒ0
+l
+java:S2095!"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(Å´Æßþÿÿÿÿ8ð‡³áŒ0

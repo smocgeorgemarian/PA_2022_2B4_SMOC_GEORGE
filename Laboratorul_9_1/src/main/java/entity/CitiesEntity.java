@@ -16,7 +16,7 @@ import java.util.Objects;
 public class CitiesEntity implements AbstractEntity{
     @Id
     @Column(name = "ID")
-//    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private BigInteger id;
     @Basic
     @Column(name = "COUNTRY")

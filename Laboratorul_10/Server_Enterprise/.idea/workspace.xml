@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c6364be0-4ae0-4375-97a4-0a3005d6f6eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/model/CommandValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Server_Enterprise_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Server_Enterprise_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/143b82c3-2bab-4dd7-bf94-06b77269e0bd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/143b82c3-2bab-4dd7-bf94-06b77269e0bd/storage_v2/_src_/schema/STUDENT.Gw7Kug.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/143b82c3-2bab-4dd7-bf94-06b77269e0bd/storage_v2/_src_/schema/STUDENT.Gw7Kug.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/143b82c3-2bab-4dd7-bf94-06b77269e0bd/storage_v2/_src_/schema/SYS.rUIBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/143b82c3-2bab-4dd7-bf94-06b77269e0bd/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_javax_el_api_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_2_0_SP1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_interceptor_javax_interceptor_api_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e60d1f5bc57f2ce4678947f128a96b858234d14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37f15bd10a05b2fd773083b52992eaf1f1248767" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e6521680c4e8c1204b5145065dc5214a230fef5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66ce0bfe621ecef79c2f08ab96ed35c013a97ffd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1d0e0e852b26b09ef3d682cab3d6613e68ee6a3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca043c3bfb9686931451f542942349ff7cdeddcf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cca46b262735e73028665ceb3fe11bf68bc9de92" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1b82335948c0f57e10ad6ee277ca76caf42f384" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server_Enterprise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ojdbc11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/server_enterprise/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/server_enterprise/HelloResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exception/InvalidNumberOfArgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/FactoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/RegisterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/StateManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ClientThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SimpleServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistance/AbstractEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistance/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistance/FriendId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistance/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/DataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PersonsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/0/9/09350b6c006268f25b9c3450f315f844facecb78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/1/e/1e01fe6f6ebfe72f62c7c5f1b1c14cf758452a50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/3/a/3a5874eb6f640cebcd9def13d0dd4ef2bfb9f1ce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/6/1/61496393213f9c70effb6cd2c7103162981d2ab9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/8/1/8103db126252c1ec38e53acfa543cc23bda681b7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/a/1/a191324ba29bb5fbd72e9adc900759c924de088e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/a/3/a31de8294725f1cd0f44f90d6e7d2a7715e0504c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/f/8/f8d8a9aeccd9f3dedbaa69137e12d0f9c9737a84" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/sonarlint/issuestore/8/8/8827c0d95053c7ab2e0ad6300e0ab03312b3a8cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/model/SimpleClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/model/SimpleClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/model/SimpleClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/model/SimpleClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/sonarlint/issuestore/0/5/056e47e79815fd3e0b2f31df873660ab679d10d9" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/sonarlint/issuestore/0/5/056e47e79815fd3e0b2f31df873660ab679d10d9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/sonarlint/issuestore/e/f/ef4f8c7f86853ad582a84f10f4fe94ebdfa6faf0" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/sonarlint/issuestore/e/f/ef4f8c7f86853ad582a84f10f4fe94ebdfa6faf0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/model/ClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/model/ClientThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/model/SimpleServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/model/SimpleServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/model/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/model/ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/model/SimpleServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/model/SimpleServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_9_1/loggerFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/loggerFile.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_9_1/src/main/java/entity/CitiesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/src/main/java/entity/CitiesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_9_1/target/classes/test/TestEntities.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_9_1/target/classes/test/TestEntities.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29ALEYbqIAm1Fsbvr5TOkutSp82" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Anul 2\PA\PA_2022_2B4_SMOC_GEORGE\Laboratorul_10\Server_Enterprise" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SimpleServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.SimpleServer" />
+      <module name="Server_Enterprise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleServer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6364be0-4ae0-4375-97a4-0a3005d6f6eb" name="Changes" comment="" />
+      <created>1652550834699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652550834699</updated>
+      <workItem from="1652550837458" duration="2518000" />
+      <workItem from="1652598472301" duration="7152000" />
+      <workItem from="1652619058911" duration="1813000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
