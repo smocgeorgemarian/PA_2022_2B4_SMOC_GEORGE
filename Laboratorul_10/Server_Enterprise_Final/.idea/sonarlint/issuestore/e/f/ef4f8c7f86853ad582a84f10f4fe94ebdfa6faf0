@@ -1,0 +1,7 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Þàš¬øÿÿÿÿ8ÿ™¾æŒ0
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(¼õ’¯8…š¾æŒ0
+U	java:S106:"9Replace this use of System.out or System.err by a logger.(¼õ’¯8…š¾æŒ0
+U
+java:S1128"8Remove this unused import 'repository.FriendRepository'.(ú–¸­8†š¾æŒ0
+z	java:S135#"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ8‡š¾æŒ0

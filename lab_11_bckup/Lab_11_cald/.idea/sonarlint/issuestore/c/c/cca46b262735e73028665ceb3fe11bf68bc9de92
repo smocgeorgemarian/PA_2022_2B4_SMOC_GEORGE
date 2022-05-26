@@ -1,0 +1,8 @@
+
+7
+java:S2326	"ID is not used in the class.(ÕÒ…ˆøÿÿÿÿ
+c	java:S119	"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ÕÒ…ˆøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Þàš¬øÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(Þàš¬øÿÿÿÿ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

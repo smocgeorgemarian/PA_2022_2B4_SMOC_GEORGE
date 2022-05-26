@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49dcba0e-0210-4341-aa31-af73d018644a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/config/JwtToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/config/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/controller/PersonsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/CustomComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/CustomEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/Friendship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/NameModifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/NewPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/result_modeler/TopCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/service/JwtUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/tutorial.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/com/example/lab_11_cald/Lab11CaldApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/model/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/model/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/persistance/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/persistance/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/repository/DataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/repository/PersonsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/java/repository/PersonsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab_11_cald/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/0/5/052c17f290cdcf87c0279973f33d490e52664a83" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/0/5/052c17f290cdcf87c0279973f33d490e52664a83" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/2/0/2019507cb903e14355c8a39fc1e0e599850f4127" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/2/0/2019507cb903e14355c8a39fc1e0e599850f4127" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/2/f/2f693faee44aca208d57a9fc05182546cfd4c622" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/2/f/2f693faee44aca208d57a9fc05182546cfd4c622" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/6/6/66ce0bfe621ecef79c2f08ab96ed35c013a97ffd" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/6/6/66ce0bfe621ecef79c2f08ab96ed35c013a97ffd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/6/6/66cfa1ded998d5084cbc69e7662db988f108374d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/6/6/66cfa1ded998d5084cbc69e7662db988f108374d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/e/f/ef4f8c7f86853ad582a84f10f4fe94ebdfa6faf0" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/e/f/ef4f8c7f86853ad582a84f10f4fe94ebdfa6faf0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/f/f/ff616507e4c0adafeaa4490a6424c14eb2e9a785" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/f/f/ff616507e4c0adafeaa4490a6424c14eb2e9a785" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/screenshot.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_10/Server_Enterprise_Final/screenshot.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laboratorul_11/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laboratorul_11/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29Z7DTrsDlLWoKKtRP4bIQAs3g7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Lab_11_cald" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="model.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49dcba0e-0210-4341-aa31-af73d018644a" name="Changes" comment="" />
+      <created>1653308634301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653308634301</updated>
+      <workItem from="1653308636430" duration="263000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
